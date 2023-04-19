@@ -16,6 +16,7 @@ let projectiles = [];
 let poops = [];
 let spikes = [];
 let lastSpikeTime = 0;
+//Test
 
 class Brizz {
   constructor(x, y, size, speed, health) {
