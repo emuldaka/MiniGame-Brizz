@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+}
+
+#game-container {
+    position: relative;
+    background-image: url("pixelgrass1080x720.png");
+}
+
+#gameCanvas {
+    display: block;
+    border: 1px solid #000;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+#timer {
+    margin-left: 20px;
+}
+
+#healthBar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 100px;
+    background-color: red;
+    border: 1px solid black;
+  }
+
+#healthBarBorder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 100px;
+    border: 1px solid black;
+  }
