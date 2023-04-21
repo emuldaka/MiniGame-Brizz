@@ -47,3 +47,72 @@ body {
     width: 100px;
     border: 1px solid black;
   }
+
+  #myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: black;
+  }
+  
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: red;
+  }
+  
+  .reverse {
+    animation: reverse-progress 30s linear forwards;
+  }
+  
+  @keyframes reverse-progress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+
+  .progress-bar-container-arrow {
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: black;
+  }
+  
+  .progress-bar-arrow {
+    width: 0%;
+    height: 100%;
+    background-color: red;
+  }
+
+  .reverseReverse {
+    animation: reverse-progress2 15s linear forwards;
+  }
+  
+  @keyframes reverse-progress2 {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+
+  

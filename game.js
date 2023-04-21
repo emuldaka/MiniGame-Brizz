@@ -246,6 +246,7 @@ function startGame() {
   // Add event listener for mouse click
   document.addEventListener("keydown", (event) => {
     if (event.code === "Space" && Date.now() - lastSpikeTime >= 30000) {
+      let progressBar = document.querySelector('.progress-bar');
       // Space key was pressed and cooldown is over
       const spike = new Spikes(brizz.x, brizz.y, 30, 0, 100, null);
       spikes.push(spike);
@@ -258,13 +259,27 @@ function startGame() {
         }
       }, 30000);
 
+      
+      
+      progressBar.classList.add('reverse');
+      progressBar.addEventListener('animationend', function() {
+        progressBar.classList.remove('reverse');
+      }, {once: true});
       lastSpikeTime = Date.now(); // Update lastSpikeTime
+
+      
     }
   });
+
+   
+
+ 
+
 
   let lastShotTime = 0; // Initialize lastShotTime variable
   const rect = canvas.getBoundingClientRect();
   canvas.addEventListener("click", (event) => {
+    let progressBar = document.querySelector('.progress-bar-arrow');
     if (event.button === 0 && Date.now() - lastShotTime >= 15000) {
       // Left mouse button was pressed and cooldown is over
       const arrow = new Arrow(brizz.x, brizz.y, 10, 5);
@@ -273,6 +288,11 @@ function startGame() {
         event.clientX - rect.left - brizz.x
       );
       arrows.push(arrow);
+
+      progressBar.classList.add('reverseReverse');
+      progressBar.addEventListener('animationend', function() {
+        progressBar.classList.remove('reverseReverse');
+      }, {once: true});
       lastShotTime = Date.now(); // Update lastShotTime
     }
   });
@@ -459,3 +479,5 @@ document.addEventListener("keyup", (event) => {
 });
 
 startGame();
+
+
