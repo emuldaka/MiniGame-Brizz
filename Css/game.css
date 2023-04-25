@@ -9,7 +9,7 @@ body {
 
 #game-container {
     position: relative;
-    background-image: url("pixelgrass1080x720.png");
+    background-image: url("./../Images/pixelgrass1080x720.png");
 }
 
 #gameCanvas {

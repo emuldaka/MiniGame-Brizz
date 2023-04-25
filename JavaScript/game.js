@@ -26,7 +26,7 @@ class Brizz {
     this.speed = speed;
     this.health = 20;
     this.sprite = new Image();
-    this.sprite.src = "BrizzblastLeft.png";
+    this.sprite.src = "./../Images/BrizzblastLeft.png";
   }
 
   draw() {
@@ -41,22 +41,22 @@ class Brizz {
     if (keys["w"] && this.y > 0) {
       this.y -= this.speed;
       this.lastDirection = "up";
-      this.sprite.src = "BrizzblastUp.png";
+      this.sprite.src = "./../Images/BrizzblastUp.png";
     }
     if (keys["s"] && this.y < canvas.height - this.size) {
       this.y += this.speed;
       this.lastDirection = "down";
-      this.sprite.src = "BrizzblastDown.png";
+      this.sprite.src = "./../Images/BrizzblastDown.png";
     }
     if (keys["a"] && this.x > 0) {
       this.x -= this.speed;
       this.lastDirection = "left";
-      this.sprite.src = "BrizzblastLeft.png";
+      this.sprite.src = "./../Images/BrizzblastLeft.png";
     }
     if (keys["d"] && this.x < canvas.width - this.size) {
       this.x += this.speed;
       this.lastDirection = "right";
-      this.sprite.src = "BrizzblastRight.png";
+      this.sprite.src = "./../Images/BrizzblastRight.png";
     }
   }
 
@@ -84,7 +84,7 @@ class Projectile {
     this.damage = 5; // Add damage property
     this.distanceTraveled = 0; // Add distanceTraveled property and initialize it with 0
     this.sprite = new Image();
-    this.sprite.src = "explosion 2019-1.png (1).png";
+    this.sprite.src = "./../Images/explosion 2019-1.png (1).png";
   }
   draw() {
     ctx.drawImage(this.sprite, this.x, this.y, this.size, this.size);
@@ -123,7 +123,7 @@ class Spikes {
     this.damage = 20;
     this.distanceTraveled = 0; // Add distanceTraveled property and initialize it with 0
     this.sprite = new Image();
-    this.sprite.src = "spikesfromgoogle-1.png.png";
+    this.sprite.src = "./../Images/spikesfromgoogle-1.png.png";
   }
   draw() {
     ctx.drawImage(this.sprite, this.x, this.y, this.size, this.size);
@@ -150,7 +150,7 @@ class Poop {
     this.currentHealth = health;
     this.damage = 5;
     this.sprite = new Image();
-    this.sprite.src = "poop.png"; // Add the sprite file path
+    this.sprite.src = "./../Images/poop.png"; // Add the sprite file path
   }
 
   draw() {
@@ -270,10 +270,6 @@ function startGame() {
       
     }
   });
-
-   
-
- 
 
 
   let lastShotTime = 0; // Initialize lastShotTime variable
